@@ -14,5 +14,13 @@ preco: 50.0,
 estoque: 7,
 };
 
+// ===== LIVRO 3  =====
+const livro3 = {
+titulo: "Harry Potter e o Priosioneiro de Azkaban",
+autor: "J. K. Rowling",
+preco: 55.6,
+estoque: 4,
+};
+
 // Esta linha entrega os dois livros para os outros arquivos usarem
-module.exports = { livro1, livro2 };
+module.exports = { livro1, livro2, livro3 };
