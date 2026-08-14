@@ -11,3 +11,30 @@ console.log("Descricao da categoria: " + l1.categoria.descricao);
   removerLivro(titulo) {
     this.#livros = this.#livros.filter((livro) => livro.titulo !== titulo);
   }
+
+  ┌───────────────────────────┐          tem um          ┌───────────────────────────┐
+│           Livro           │ ───────────────────────> │         Categoria         │
+├───────────────────────────┤                          ├───────────────────────────┤
+│ + titulo                  │                          │ + nome                    │
+│ + autor                   │                          │ + descricao               │
+│ + categoria               │                          ├───────────────────────────┤
+│ - preco                   │                          │ + descrever()             │
+│ - estoque                 │                          └───────────────────────────┘
+├───────────────────────────┤
+│ + get preco()             │
+│ + get estoque()           │
+│ + descrever()             │
+└───────────────────────────┘
+              ^
+              │
+              │ tem muitos
+              │
+┌─────────────┴─────────────┐
+│         Carrinho          │
+├───────────────────────────┤
+│ - livros                  │
+├───────────────────────────┤
+│ + adicionarLivro(livro)   │
+│ + listar()                │
+│ + calcularTotal()         │
+└───────────────────────────┘
